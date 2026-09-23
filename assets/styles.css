@@ -109,7 +109,7 @@ section{padding:84px 0}
 .thumb-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:18px}
 .thumb-strip a{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:var(--shadow-s);transition:transform .2s}
 .thumb-strip a:hover{transform:translateY(-3px)}
-.thumb-strip img{width:100%;height:110px;object-fit:cover}
+.thumb-strip img{width:100%;height:120px;object-fit:contain;background:#fff}
 .thumb-strip figure{margin:0}
 .thumb-strip figcaption{font-size:12px;color:var(--muted);padding:6px 10px 8px;font-weight:600}
 .thumb-strip.wide{grid-template-columns:1fr}
@@ -120,10 +120,10 @@ section{padding:84px 0}
 .filters button{border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:999px;font-weight:700;cursor:pointer;font-size:14px;color:#28405e}
 .filters button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.g-item{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#0a1628;cursor:zoom-in;box-shadow:var(--shadow-s)}
-.g-item img{width:100%;height:250px;object-fit:cover;transition:transform .35s}
-.g-item:hover img{transform:scale(1.05)}
-.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(transparent,rgba(5,12,24,.85));color:#fff;font-size:13px;font-weight:650}
+.g-item{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;cursor:zoom-in;box-shadow:var(--shadow-s)}
+.g-item img{width:100%;height:260px;object-fit:contain;background:#fff}
+.g-item:hover{box-shadow:var(--shadow)}
+.g-item figcaption{padding:10px 14px 12px;background:#fff;color:var(--ink);font-size:13px;font-weight:650;border-top:1px solid var(--line)}
 /* lightbox */
 .lightbox{position:fixed;inset:0;background:rgba(5,12,24,.88);display:none;place-items:center;z-index:100;padding:24px}
 .lightbox.open{display:grid}
