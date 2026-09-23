@@ -1,4 +1,4 @@
-// FLAG TECH site interactions: fixed header, top-dropdown mobile nav, reveal, gallery filter + lightbox, contact validation.
+// Mersha site interactions: fixed header, top-dropdown mobile nav, reveal, gallery filter + lightbox, contact validation.
 (function(){
   var header=document.querySelector('.header');
   function onScroll(){ if(header) header.classList.toggle('scrolled', window.scrollY>8); }
