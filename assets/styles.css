@@ -232,3 +232,10 @@ section{padding:84px 0}
 .grid-3.grid-masonry>.card{break-inside:avoid;margin:0 0 22px}
 @media(max-width:1020px){.grid-3.grid-masonry{columns:2}}
 @media(max-width:640px){.grid-3.grid-masonry{columns:1}}
+
+/* Hero popup to top side of image, not middle */
+.hero-card{top:26px;bottom:auto}
+@media(max-width:640px){.hero-card{top:12px;bottom:auto}}
+
+/* Hero popup below image — full image visible, no overlay */
+.hero-card{position:static;max-width:none;margin:14px 0 0}
