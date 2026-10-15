@@ -220,3 +220,15 @@ section{padding:84px 0}
 /* Text-only service rows (brochure photos removed per customer request) */
 .alt-row.no-media{grid-template-columns:1fr}
 .alt-row.no-media .alt-media{display:none}
+
+/* Balanced grids on desktop: cards keep natural height, no stretch blank space */
+.grid-2,.grid-3,.grid-4,.gallery{align-items:start}
+/* Compact thumb-strip inside product cards (10 thumbs looked too tall) */
+.card .thumb-strip{grid-template-columns:repeat(3,1fr);gap:10px}
+.card .thumb-strip img{height:96px}
+
+/* Masonry flow for products range: lower cards rise into gaps, no blank row space */
+.grid-3.grid-masonry{display:block;columns:3;column-gap:22px}
+.grid-3.grid-masonry>.card{break-inside:avoid;margin:0 0 22px}
+@media(max-width:1020px){.grid-3.grid-masonry{columns:2}}
+@media(max-width:640px){.grid-3.grid-masonry{columns:1}}
