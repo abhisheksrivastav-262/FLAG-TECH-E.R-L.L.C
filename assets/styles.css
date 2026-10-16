@@ -239,3 +239,22 @@ section{padding:84px 0}
 
 /* Hero popup below image — full image visible, no overlay */
 .hero-card{position:static;max-width:none;margin:14px 0 0}
+
+/* Bigger header brand (logo + name) */
+.brand-mark{width:60px;height:60px;flex:0 0 60px}
+.brand-name strong{font-size:18px;max-width:300px}
+.brand-name span{font-size:12px}
+@media(max-width:640px){
+  .brand-mark{width:50px;height:50px;flex-basis:50px}
+  .brand-name strong{font-size:14px;max-width:220px}
+  .brand-name span{font-size:10.5px}
+}
+
+/* Laptop header: fit bigger brand + nav + CTA in one line */
+.header-cta{white-space:nowrap}
+@media(max-width:1240px){
+  .header-inner{gap:10px}
+  .nav-desktop a{padding:10px 8px;font-size:13.5px}
+  .header-cta{padding:10px 14px;font-size:13px}
+  .brand-name strong{font-size:16px;max-width:260px}
+}
