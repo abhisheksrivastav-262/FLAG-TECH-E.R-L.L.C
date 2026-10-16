@@ -60,7 +60,7 @@
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
   }
 
-  // Contact form validation (front-end only; ready for backend integration)
+  // Contact form: validates, then opens email app with prefilled enquiry (no backend needed)
   var form=document.getElementById('consult-form');
   if(form){
     form.addEventListener('submit', function(e){
@@ -80,8 +80,12 @@
       check('message', function(v){return v.length>=10;});
       var status=document.getElementById('form-status');
       if(!ok){ if(status){status.textContent='Please correct the highlighted fields.'; status.style.color='#b42318';} return; }
-      if(status){status.textContent='Thank you. Your enquiry details are ready — connect this form to your email/CRM endpoint to receive submissions.'; status.style.color='#0b5cad';}
-      form.reset();
+      var gv=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+      var subject='New enquiry (website): '+gv('service')+' — '+gv('name');
+      var dFiles=((document.getElementById('drawing')||{}).files||[]).length;
+      var body='Name: '+gv('name')+'\nCompany: '+gv('company')+'\nPhone: '+gv('phone')+'\nEmail: '+gv('email')+'\nService: '+gv('service')+'\nMaterial: '+gv('material')+'\nQuantity: '+gv('quantity')+'\nDelivery date: '+gv('delivery')+'\n\nRequirement:\n'+gv('message')+'\n\n(Drawing files selected: '+dFiles+' — please attach them in your email app)';
+      window.location.href='mailto:meraj@mershauae.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      if(status){status.textContent='Opening your email app with the enquiry addressed to meraj@mershauae.com — attach your drawing file before sending. You can also WhatsApp us on +971562620651.'; status.style.color='#0b5cad';}
     });
   }
   document.getElementById('year') && (document.getElementById('year').textContent=new Date().getFullYear());

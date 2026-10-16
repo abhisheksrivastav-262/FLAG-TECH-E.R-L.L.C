@@ -258,3 +258,14 @@ section{padding:84px 0}
   .header-cta{padding:10px 14px;font-size:13px}
   .brand-name strong{font-size:16px;max-width:260px}
 }
+
+/* Desktop friendly: wider layout + hero image natural height (no dark bands) */
+@media(min-width:1021px){
+  .wrap{max-width:1360px}
+  .hero-frame img{height:auto;max-height:460px}
+}
+
+/* Floating WhatsApp quote button */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:70;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px rgba(37,211,102,.45)}
+.wa-float:hover{color:#fff}
+.wa-float svg{width:30px;height:30px}
