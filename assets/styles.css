@@ -34,15 +34,15 @@ section{padding:84px 0}
 /* ---------- Header (FIXED: stays visible on scroll) ---------- */
 .header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s,background .3s}
 .header.scrolled{box-shadow:0 10px 30px rgba(10,22,40,.12);background:rgba(255,255,255,.97)}
-.header-inner{display:flex;align-items:center;gap:18px;height:76px}
+.header-inner{display:flex;align-items:center;gap:12px;height:76px}
 .brand{display:flex;align-items:center;gap:12px;margin-right:auto;min-width:0}
 .brand-mark{width:46px;height:46px;flex:0 0 46px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#083f77);display:grid;place-items:center;color:#fff;box-shadow:var(--shadow-s)}
 .brand-mark svg{width:30px;height:30px}
 .brand-name{line-height:1.1}
 .brand-name strong{display:block;font-size:15px;letter-spacing:.01em;color:var(--navy);line-height:1.2;max-width:250px}
 .brand-name span{display:block;font-size:11px;letter-spacing:.18em;color:var(--muted);font-weight:700}
-.nav-desktop{display:flex;align-items:center;gap:4px}
-.nav-desktop a{padding:10px 12px;border-radius:10px;color:#243b58;font-weight:650;font-size:14.5px;white-space:nowrap}
+.nav-desktop{display:flex;align-items:center;gap:2px}
+.nav-desktop a{padding:10px 9px;border-radius:10px;color:#243b58;font-weight:650;font-size:13.5px;white-space:nowrap}
 .nav-desktop a:hover{background:var(--sky);color:var(--navy)}
 .nav-desktop a.active{background:var(--navy);color:#fff}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:14px;font-weight:750;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
