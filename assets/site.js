@@ -84,8 +84,8 @@
       var subject='New enquiry (website): '+gv('service')+' — '+gv('name');
       var dFiles=((document.getElementById('drawing')||{}).files||[]).length;
       var body='Name: '+gv('name')+'\nCompany: '+gv('company')+'\nPhone: '+gv('phone')+'\nEmail: '+gv('email')+'\nService: '+gv('service')+'\nMaterial: '+gv('material')+'\nQuantity: '+gv('quantity')+'\nDelivery date: '+gv('delivery')+'\n\nRequirement:\n'+gv('message')+'\n\n(Drawing files selected: '+dFiles+' — please attach them in your email app)';
-      window.location.href='mailto:meraj@mershauae.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      if(status){status.textContent='Opening your email app with the enquiry addressed to meraj@mershauae.com — attach your drawing file before sending. You can also WhatsApp us on +971562620651.'; status.style.color='#0b5cad';}
+      window.location.href='mailto:info@mershaengineeringuae.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      if(status){status.textContent='Opening your email app with the enquiry addressed to info@mershaengineeringuae.com — attach your drawing file before sending. You can also WhatsApp us on +971562620651.'; status.style.color='#0b5cad';}
     });
   }
   document.getElementById('year') && (document.getElementById('year').textContent=new Date().getFullYear());
